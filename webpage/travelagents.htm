@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>Tile Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+// Toggle menu on small screens
+<script>
+function MyFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+	x.className += " w3-show";
+    } else {
+	x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+// Navigation bar
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-hide-medium w3-right" href="javascript:void(0)" onclick="MyFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="webpage.htm" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="locations.htm" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOCATIONS</a>
+    <a href="travelagents.htm" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AGENTS</a>
+    <a href="timeshare.htm" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TIMESHARE</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button">MORE <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	<a href="rentals.htm" class="w3-bar-item w3-button">RENTALS</a>
+	<a href="news.htm" class="w3-bar-item w3-button">NEWS</a>
+	<a href="customerreviews.htm" class="w3-bar-item w3-button">CUSTOMER REVIEWS</a>
+      </div>
+    </div>
+  </div>
+</div>    
+
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="locations.htm" class="w3-bar-item w3-button">LOCATIONS</a>
+  <a href="travelagents.htm" class="w3-bar-item w3-button">TRAVEL AGENTS</a>
+  <a href="timeshare.htm" class="w3-bar-item w3-button">TIMESHARE</a>
+  <a href="rentals.htm" class="w3-bar-item w3-button">RENTALS</a>
+  <a href="news.htm" class="w3-bar-item w3-button">NEWS</a>
+  <a href="customerreviews.htm" class="w3-bar-item w3-button">CUSTOMER REVIEWS</a>
+</div>
+
+// Page Content
+<div class="w3-content" style="max-width:2000px">
+  <div class"w3-display-container w3-center">
+    <img src="" style="width:100%">
