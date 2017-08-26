@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>Tile Homepage</title>
+<title>Travel Agents</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,6 +17,45 @@ function MyFunction() {
 	x.className += " w3-show";
     } else {
 	x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function showAgentInfo1() {
+    var x = document.getElementById("AgentInfo1");
+    if (x.className.indexOf("w3-show") == -1) {
+	x.className += " w3-show";
+	document.getElementById("AgentInfo1").style.backgroundColor = "lightgray";
+	document.getElementById("AgentButton1").style.backgroundColor = "lightgray";
+    } else {
+	x.className = x.className.replace(" w3-show", "");
+	document.getElementById("AgentInfo1").style.backgroundColor = "";
+	document.getElementById("AgentButton1").style.backgroundColor = "";
+    }
+}
+
+function showAgentInfo2() {
+    var x = document.getElementById("AgentInfo2");
+    if (x.className.indexOf("w3-show") == -1) {
+	x.className += " w3-show";
+	document.getElementById("AgentInfo2").style.backgroundColor = "lightgray";
+	document.getElementById("AgentButton2").style.backgroundColor = "lightgray";
+    } else {
+	x.className = x.className.replace(" w3-show", "");
+	document.getElementById("AgentInfo2").style.backgroundColor = "";
+	document.getElementById("AgentButton2").style.backgroundColor = "";
+    }
+}
+
+function showAgentInfo3() {
+    var x = document.getElementById("AgentInfo3");
+    if (x.className.indexOf("w3-show") == -1) {
+	x.className += " w3-show";
+	document.getElementById("AgentInfo3").style.backgroundColor = "lightgray";
+	document.getElementById("AgentButton3").style.backgroundColor = "lightgray";
+    } else {
+	x.className = x.className.replace(" w3-show", "");
+	document.getElementById("AgentInfo3").style.backgroundColor = "";
+	document.getElementById("AgentButton3").style.backgroundColor = "";
     }
 }
 </script>
@@ -51,5 +90,52 @@ function MyFunction() {
 
 // Page Content
 <div class="w3-content" style="max-width:2000px">
-  <div class"w3-display-container w3-center">
-    <img src="" style="width:100%">
+  <div class="w3-display-container w3-center">
+    <img class="w3-image" src="agentpagepic.jpg" width="800" height="800">
+    <div class="w3-display-bottomright w3-padding-large">
+      <button class="w3-button w3-black">Talk to our agents</button>
+    </div>
+  </div>
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+    <h2 class="w3-wide">OUR AGENTS</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+	<p>Alex Verigo</p>
+	<img class="w3-card-4 w3-round w3-margin-bottom" src="AlexVerigo.jpg" alt="AlexVerigo.jpg" style="width:60%">
+	<div class="w3-dropdown-click w3-hover-white">
+	  <button id="AgentButton1" class="w3-padding-large w3-button" onclick="showAgentInfo1()">LEARN MORE <i class="fa fa-caret-down"></i></button>
+	  <div id="AgentInfo1" class="w3-lightgray w3-container" style="display:none">
+	    <p>Alex Vergo is President of Platinum Travel, and enjoys putting together marketing plans and working on this very website.  Past positions at Holland America Line and The Walt Disney Company gave him lots of experience in working with a wide array of clients and diverse destinations.  His favorite destinations include Alaska and Eastern Europe, with his most favorite being Australia (he's an Australia Specialist through Tourism Australia).  If you're ever in the market for a phone call from Mickey Mouse, he does a great impersonation!</p>
+	  </div>
+	</div>
+      </div>
+      <div class="w3-third">
+	<p>Betty Sara</p>
+	<img class="w3-card-4 w3-round w3-margin-bottom" src="BettySara.jpg" alt="BettySara.jpg" style="width:60%">
+	<div class="w3-dropdown-click w3-hover-white">
+	  <button id="AgentButton2" class="w3-padding-large w3-button" onclick="showAgentInfo2()">LEARN MORE <i class="fa fa-caret-down"></i></button>
+	  <div id="AgentInfo2" class="w3-lightgray w3-container" style="display:none">
+	    <p>Betty Sarah is a Luxury Travel Advisor as well as Vice-President at Platinum Travel.  She brings a world of experience and a vast array of knowledge to the Platinum Travel staff.  Emily holds degrees in Travel and Tourism and Hospitality Management.  Emily's career background in both the leisure and corporate travel industry has led her to gain accreditation for various organizations.  In 2010, she was appointed by Travel Agent Magazine as one of the Top 30 Travel Advisors under the Age of 30 and in 2013 was selected as part of the Virtuoso Travel Advisory board for Islands Magazine, Caribbean Travel and Life, and Destination Weddings and Honeymoons.</p>
+	  </div>
+	</div>
+      </div>
+      <div class="w3-third">
+	<p>Carla Sanchez</p>
+	<img class="w3-card-4 w3-round w3-margin-bottom" src="CarlaSanchez.jpg"  alt="CarlaSanchez.jpg" style="width:60%">
+	<div class="w3-dropdown-click w3-hover-white">
+	  <button id="AgentButton3" class="w3-padding-large w3-button" onclick="showAgentInfo3()">LEARN MORE <i class="fa fa-caret-down"></i></button>
+	  <div id="AgentInfo3" class="w3-lightgray w3-container" style="display:none">
+	    <p>Carla Sanchez has been with Platinum Travel specializing in luxury adventure travel and romantic escapes for over 15 years, and has been a travel consultant for nearly 25 years.  She loves to travel, and really enjoys sitting down with clients and planning the perfect trip for them. Growing us as an Air Force "brat", she was exposed to many different cultures and destinations while living all over the U.S. and South Pacific, and, as a result of those experiences, has remained eager for new travel adventures. She would love to help you plan your own adventures and memories for a true "Return on Life". </p>
+	  </div>
+	</div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<!--Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+</body>
+</html>
